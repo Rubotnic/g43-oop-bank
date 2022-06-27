@@ -46,7 +46,6 @@ public class BankAccountLong {
         this.balance = balance;
     }
 
-
     public Customer getCustomer() {
         return customer;
     }

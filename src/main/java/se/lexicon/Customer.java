@@ -7,6 +7,9 @@ public class Customer {
     private String email;
     private String phoneNumber;
 
+    // Using address class. Relationship.
+    private Address address;
+
 
 //  constructor
     public Customer(String name, String email, String phoneNumber) {
@@ -14,8 +17,15 @@ public class Customer {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
+    //  constructor with address
+    public Customer(String name, String email, String phoneNumber, Address address) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
 
-//  Getter and setter
+    //  Getter and setter
     public String getName() {
         return name;
     }
@@ -39,13 +49,23 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-//  toString
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+    //  toString
+
     @Override
     public String toString() {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
+                ", address=" + address +
                 '}';
     }
 }
