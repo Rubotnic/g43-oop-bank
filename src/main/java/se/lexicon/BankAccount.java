@@ -2,8 +2,7 @@ package se.lexicon;
 
 public class BankAccount {
 
-    private  static int accountNumberSequencer = 0;
-
+    private static int accountNumberSequencer = 0;
 
     private int accountNumber;
     private double balance;
@@ -47,21 +46,20 @@ public class BankAccount {
 //            balance = balance - amount;
 //        }
 
-    public void withdraw(double amount){
+    public void withdraw(double amount) {
 //      Exception - Red text shows stop!
-        if(amount >balance)
-        {
+        if (amount > balance) {
             throw new IllegalArgumentException("Amount is greater than your balance. INVALID ACTION");
         }
-        balance =balance - amount;
+        balance = balance - amount;
     }
 
 
-    public int getAccountNumber(){
+    public int getAccountNumber() {
         return this.accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber){
+    public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -95,5 +93,16 @@ public class BankAccount {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "BankAccount{" +
+                "accountNumber=" + accountNumber +
+                ", balance=" + balance +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
